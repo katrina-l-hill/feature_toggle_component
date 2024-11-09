@@ -24,7 +24,7 @@ describe('FeatureToggle Component', () => {
     render(<FeatureToggle isEnabled={true} featureName="" />);
     const emptyElement = screen.getByTestId('feature-toggle');
     expect(emptyElement).toBeInTheDocument();
-    expect(emptyElement).toHaveTextContent(''); // Ensure it has no text content
+    expect(emptyElement).toHaveTextContent(''); 
   });
 
   test('handles long featureName string when isEnabled is false', () => {
