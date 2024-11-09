@@ -1,15 +1,12 @@
+// src/FeatureToggle.js
 import React from 'react';
 
-function FeatureToggle({ isEnabled, featureName }) {
+const FeatureToggle = ({ isEnabled, featureName }) => {
   return (
-    <div>
-      {isEnabled ? (
-        <p>{featureName}</p>
-      ) : (
-        <p>Feature {featureName} is disabled</p>
-      )}
+    <div data-testid="feature-toggle">
+      {isEnabled ? featureName : `Feature ${featureName} is disabled`}
     </div>
   );
-}
+};
 
 export default FeatureToggle;
